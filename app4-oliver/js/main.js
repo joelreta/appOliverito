@@ -163,7 +163,7 @@ function queryDetalleSuccess(tx, results) {
 	}
 
 	$.registro = results.rows.item(0);
-	$("#categoria").html($.registro.categoria);
+	$("#DEcategoria").html($.registro.categoria);
 
 	var str2 = $.registro.num_tel;
 	var result2 = str2.link($.registro.num_tel);
@@ -327,8 +327,8 @@ function deletaForm(){
 	}
 }
 function deleteData(tx) {
-    var idRe =$("#id_re").val(); //document.getElementById('id_re');
+    var idRe = $("#id_re").val(); //document.getElementById('id_re');
     if(confirm("Desea Eliminar")){
-    tx.executeSql("DELETE FROM agenda_curso WHERE id = " + idRe.value, [], newFormSuccess, errorDB);
+    tx.executeSql("DELETE FROM agenda_curso WHERE id = " + $("#id_re").val(), [], newFormSuccess, errorDB);
     }
 }
