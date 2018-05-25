@@ -174,6 +174,7 @@ function queryDetalleSuccess(tx, results) {
 			_foto = "assets/no_foto.png";
 
 		}
+		alert($.registro.nombre);
 		$("#foto_img").attr("src", _foto);
 		$("#DEnombre").html($.registro.nombre + " " + $.registro.apellidos);
 		$("#DEnum_tel").html($.registro.telefono);
