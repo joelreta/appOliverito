@@ -144,6 +144,9 @@ function cargaDatosSuccess(tx, results){
 */
 
 $(document).on("pagebeforeshow", "#detalle", function(){
+	mkLog('ID recuperado en vista form: ' + $.id);
+	
+	initForm();
 	if(db != null){
 		db.transaction(queryDBFindByID, errorDB);
 	}
